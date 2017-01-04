@@ -45,7 +45,11 @@ class SignInForm extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.user.status === 'authenticated' && !nextProps.user.user && !nextProps.user.error) {
+<<<<<<< HEAD
             this.context.router.push('/profile');
+=======
+            this.context.router.push('/');
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
         }
 
         if (nextProps.user.status === 'signin' && nextProps.user.error && !this.props.user.error) {

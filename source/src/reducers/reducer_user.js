@@ -1,15 +1,44 @@
 
 import {
+<<<<<<< HEAD
+=======
+    ME_FROM_TOKEN, ME_FROM_TOKEN_SUCCESS, ME_FROM_TOKEN_FAILURE, RESET_TOKEN,
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
 	SIGNIN_USER, SIGNIN_USER_SUCCESS, SIGNIN_USER_FAILURE,
 	USER_PROFILE, USER_PROFILE_SUCCESS, USER_PROFILE_FAILURE, RESET_USER,
 	LOGOUT_USER
 } from '../actions/users';
 
+<<<<<<< HEAD
 const INITIAL_STATE = {user: null, status: null, error: null, loading: false};
+=======
+
+// user = userobj,
+// status can be:
+// 1. 'storage' ie. localstorage / sessionstorage)
+// 3. 'signin' (signing in)
+// 5. 'authenticated'(after signin)
+// 6. 'logout' (after logout)
+
+const INITIAL_STATE = {user: null, status:null, error:null, loading: false};
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
 
 export default function(state = INITIAL_STATE, action) {
     let error;
     switch(action.type) {
+<<<<<<< HEAD
+=======
+        case ME_FROM_TOKEN:
+            return { ...state, user: null, status: 'storage', error: null, loading: true};
+        case ME_FROM_TOKEN_SUCCESS:
+            return { ...state, user: null, status: 'authenticated', error: null, loading: false};
+        case ME_FROM_TOKEN_FAILURE:
+            error = action.payload.data || {message: action.payload.message};
+            return { ...state, user: null, status: 'storage', error: error, loading: false};
+        case RESET_TOKEN:
+            return { ...state, user: null, status: 'storage', error: null, loading: false};
+
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
         case SIGNIN_USER:
             return { ...state, user: null, status: 'signin', error: null, loading: true};
         case SIGNIN_USER_SUCCESS:
@@ -27,7 +56,11 @@ export default function(state = INITIAL_STATE, action) {
             return { ...state, user: null, status: 'signin', error: error, loading: false};
 
         case LOGOUT_USER:
+<<<<<<< HEAD
             return {...state, user: null, status: 'logout', error: null, loading: false};
+=======
+            return {...state, user:null, status: 'logout', error: null, loading: false};
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
 
         case RESET_USER:
             return { ...state, user: null, status: null, error: null, loading: false};

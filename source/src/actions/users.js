@@ -15,6 +15,15 @@ export const LOGOUT_USER = 'LOGOUT_USER';
 
 const ROOT_URL = 'http://212.47.246.115:9510';
 
+<<<<<<< HEAD
+=======
+export function resetToken() {//used for logout
+    return {
+        type: RESET_TOKEN
+    };
+}
+
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
 export function signInUser(formValues) {
     const request = axios.post(`${ROOT_URL}/login`, formValues);
 
@@ -39,7 +48,11 @@ export function signInUserFailure(error) {
 }
 
 export function logoutUser() {
+<<<<<<< HEAD
     const request = axios.get(`${ROOT_URL}/logout?token=` + localStorage.getItem('token'));
+=======
+    const request = axios.get(`${ROOT_URL}/logout?token=` + sessionStorage.getItem('token'));
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
 
     return {
         type: LOGOUT_USER
@@ -47,7 +60,11 @@ export function logoutUser() {
 }
 
 export function getUserProfile() {
+<<<<<<< HEAD
     const request = axios.get(`${ROOT_URL}/profile?token=` + localStorage.getItem('token'));
+=======
+    const request = axios.get(`${ROOT_URL}/profile?token=` + sessionStorage.getItem('token'));
+>>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
 
     return {
         type: USER_PROFILE,
