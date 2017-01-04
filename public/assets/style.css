@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Lato', Tahoma, sans-serif; }
+
+body {
+  min-height: 100%;
+  position: relative; }
+
+a {
+  text-decoration: none;
+  color: #508EBE;
+  font-weight: 800; }
+  a:hover {
+    text-decoration: underline; }
+
+.page-header > .btn:not(:last-child) {
+  margin-right: 5px; }
+
+.media .media-body {
+  padding-left: 20px; }
+
+/*# sourceMappingURL=style.css.map*/

@@ -1,0 +1,22 @@
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin align-items($details) {
+    @include display-flex();
+    -webkit-align-items: $details;
+    align-items: $details;
+}
+@mixin justify-content($details) {
+    @include display-flex();
+    -webkit-justify-content: $details;
+    justify-content: $details;
+}
+@mixin avatar() {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+}
