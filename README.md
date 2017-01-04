@@ -19,4 +19,6 @@ Testes are not provided in this example. I am familiar with React `TestUtils` bu
 
 ## Addition
 
+Error example provided on `Home` and `SignIn` pages. Didn't implement global error component.
+
 Sorry for a messy commit log. Task was done from different machines and could not provide full steps of my work.
