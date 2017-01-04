@@ -15,7 +15,7 @@ To see example you need to use folder `public` under any virtual host (example A
 
 ## Tests
 
-Testes are not provided in this example. I am familiar with React `TestUtils` but don't have big experience with it. `
+Testes are not provided in this example. I am familiar with React `TestUtils` but don't have big experience with it.
 
 ## Addition
 
