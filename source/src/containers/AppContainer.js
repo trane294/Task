@@ -18,10 +18,7 @@ const mapDispatchToProps = (dispatch) => {
                 if (!_response.success) {
                     dispatch(getUserProfileFailure(_response.data));
                     localStorage.removeItem('token');
-<<<<<<< HEAD
-=======
-                    throw new SubmissionError(_response.data);
->>>>>>> 56c4f14e7bbba21a9b07f46671d42b05d4126d3d
+
                 }
 
                 dispatch(getUserProfileSuccess(_response.data));
